@@ -61,7 +61,7 @@ public class SecurityConfig {
 
                         // Authentication
                         .requestMatchers(
-                                "/api/v1/auth/**",
+                                "/api/v1/auth/login",
                                 "/api/v1/dashboard/**"
                         ).permitAll()
 

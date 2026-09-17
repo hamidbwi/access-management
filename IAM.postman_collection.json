@@ -11,6 +11,15 @@
       "request": {
         "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"usernameOrEmail\": \"admin01\",\r\n  \"password\": \"admin01\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
           "raw": "localhost:8080/api/v1/auth/login",
           "host": [
@@ -30,6 +39,16 @@
     {
       "name": "Dashboard",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyMDEiLCJpYXQiOjE3ODk2NTAxNTUsImV4cCI6MTc4OTY1Mzc1NX0.sVhJ5aXDnGQ7SQtmRTjhSHW7-tkLwJuuegwv-orIcJ8JGRcxnaz89Iv2anqZOMXu",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
@@ -51,6 +70,16 @@
     {
       "name": "Access",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyMDEiLCJpYXQiOjE3ODk2NTAxNTUsImV4cCI6MTc4OTY1Mzc1NX0.sVhJ5aXDnGQ7SQtmRTjhSHW7-tkLwJuuegwv-orIcJ8JGRcxnaz89Iv2anqZOMXu",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
@@ -71,8 +100,27 @@
     {
       "name": "Request",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyMDEiLCJpYXQiOjE3ODk2NTAxNTUsImV4cCI6MTc4OTY1Mzc1NX0.sVhJ5aXDnGQ7SQtmRTjhSHW7-tkLwJuuegwv-orIcJ8JGRcxnaz89Iv2anqZOMXu",
+              "type": "string"
+            }
+          ]
+        },
         "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"access_id\": 1,\r\n  \"reason\": \"Need VPN access for development\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
           "raw": "localhost:8080/api/v1/requests",
           "host": [
@@ -91,10 +139,20 @@
     {
       "name": "Request",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyMDEiLCJpYXQiOjE3ODk2NDk4MjMsImV4cCI6MTc4OTY1MzQyM30.lO5gJGuBp1HRxmfb6cxNapvOcjf0UeZD-Ut_eEcH2OBC7q-xViGCchzKY0nqiosc",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "localhost:8080/api/v1/accesses/me",
+          "raw": "localhost:8080/api/v1/requests/me",
           "host": [
             "localhost"
           ],
@@ -102,7 +160,7 @@
           "path": [
             "api",
             "v1",
-            "accesses",
+            "requests",
             "me"
           ]
         }
@@ -112,6 +170,16 @@
     {
       "name": "Approval",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjAxIiwiaWF0IjoxNzg5NjUxNDgwLCJleHAiOjE3ODk2NTUwODB9.lZUnBZKyZZ68DUsXbXSQBZsHc6M862RWRwkRD2TnYdeQOoapNEhhs199AHkxOKIb",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
         "header": [],
         "url": {
@@ -132,8 +200,27 @@
     {
       "name": "Approval",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbjAxIiwiaWF0IjoxNzg5NjUxNDgwLCJleHAiOjE3ODk2NTUwODB9.lZUnBZKyZZ68DUsXbXSQBZsHc6M862RWRwkRD2TnYdeQOoapNEhhs199AHkxOKIb",
+              "type": "string"
+            }
+          ]
+        },
         "method": "PATCH",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"action\": \"APPROVE\",\r\n  \"notes\": \"Final approval\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
           "raw": "localhost:8080/api/v1/approvals/:id/action",
           "host": [
@@ -150,7 +237,7 @@
           "variable": [
             {
               "key": "id",
-              "value": ""
+              "value": "1"
             }
           ]
         }

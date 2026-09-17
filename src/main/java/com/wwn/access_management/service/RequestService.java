@@ -31,7 +31,6 @@ public class RequestService {
             CreateRequest request,
             String username
     ) {
-
         User user = userRepository
                 .findByUsername(username)
                 .orElseThrow(() ->

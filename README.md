@@ -260,7 +260,7 @@ Body:
 
 ```json
 {
-  "username": "user01",
+  "usernameOrEmail": "user01",
   "password": "password"
 }
 ```
@@ -387,7 +387,7 @@ Body:
 
 ```json
 {
-  "username": "admin01",
+  "usernameOrEmail": "admin01",
   "password": "password"
 }
 ```

@@ -15,7 +15,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
 
-@PreAuthorize("hasAnyRole('MANAGER', 'ADMIN')")
 @RestController
 @RequestMapping("/api/v1/approvals")
 @RequiredArgsConstructor
